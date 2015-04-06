@@ -9,7 +9,14 @@ class AB {
 
 	string createString(int N, int k){
 		string n_string;
-		while()
+		//check possible
+		//if possible make the string
+		//else return ""
+
+		while( N != 0){
+
+			--N;
+		}
 		return n_string;
 	}
 };	

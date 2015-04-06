@@ -40,4 +40,99 @@ Five characters is too short for this value of K.
 Returns: "BAABBABAAB"
 Please note that this is an example of a solution; other valid solutions will also be accepted.
 This problem statement is the exclusive and proprietary property of TopCoder, Inc. Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited. (c)2003, TopCoder, Inc. All rights reserved.
- 
+
+notes based on observations
+example 0)
+3 letters = A B B
+ first pair is 
+ A B(1)
+ second pair
+ A B(2)
+
+ example 1)
+ length is 2
+ B A
+ but no possible strings
+ 0 <= i < j<= 4  
+BA = 0 
+AB = 1
+ABB = 2
+__________________________________
+
+
+4
+3
+
+ABAB
+
+
+
+10
+12
+0 <= i < j <= 10 - 1
+0 <= i <  j <= 9
+
+
+ 0 1   2 3   4 5   6 7   8 9
+(B A) (A B) (B A) (B A) (A B)
+
+STEP 1:
+ 0 1   2 3   4 5   6 7   8 9
+(A B) (A B) (A B) (A B) (A B)  (5+ 4 + 3 + 2 + 1 = 15)
+
+STEP 1.1:
+CHECK BIGGER OR LESS THAN
+15 > 12
+
+STEP 2: SWAP FIRST PAIR
+ 0 1   2 3   4 5   6 7   8 9
+(B A) (A B) (A B) (A B) (A B)  (4+ 4 + 3 + 2 + 1 = 14)
+
+STEP 2.1:
+CHECK BIGGER OR LESS THAN
+14 > 12
+
+STEP 3: SWAP FIRST PAIR
+ 0 1   2 3   4 5   6 7   8 9
+(B A) (B A) (A B) (A B) (A B)  (4+ 3 + 3 + 2 + 1 = 13)
+  1      2    3     4     5     1  2   3   4   5
+
+STEP 3.1:
+CHECK BIGGER OR LESS THAN
+13 > 12
+
+STEP 4: SWAP FIRST PAIR
+ 0 1   2 3   4 5   6 7   8 9
+(B A) (B A) (B A) (A B) (A B)  (4 + 3 + 2 + 2 + 1 = 12)
+  1      2    3     4     5     1   2   3   4   5
+
+
+
+3
+2
+STEP 1:
+(A B) (A  NULL) = 1
+CHECK BIGGER
+1< 3
+MUST ADD B TO INDEX + 1 
+(A B ) (B NULL) = 3
+CHECK!
+
+5 
+8
+
+(A B) (A B ) (A NULL)
+WHAT IS THE MAX VALUE THAT YOU CAN GET WITH 5
+A A A B B = 2 + 2 + 2 = 6
+A A B B B = 3 + 3 = 6
+MAX WITH 6
+ A A A B B B = 3 + 3 + 3 = 9
+ A A B B B B = 4 + 4 = 8
+
+ 0 1   2 3   4 5   6 7   8 9
+(A B) (A B) (A B) (A B) (A B)  (6+ 5 + 4 + 3  = 15)
+(A B) (A B) (A B) (A B) (B A) (5 + 4 +3 + 2 ) = 14
+(A B) (A B) (A B) (B A ) (B A)
+
+
+
