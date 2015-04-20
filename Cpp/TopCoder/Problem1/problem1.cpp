@@ -12,7 +12,7 @@ class AB {
 		//check possible
 		//if possible make the string
 		//else return ""
-
+		if(N )
 		while( N != 0){
 
 			--N;
