@@ -1,1 +1,5 @@
-print "the point of this is to eventually put an encrypted message into a wav file"
+import wave, struct
+
+waveFile = wave.open('test_file.wav', 'r')
+
+length = waveFile.getnframes()
