@@ -12,7 +12,7 @@ int main(){
 
 }
 
-int isUniqueChar(string s){
+void reverse(char* s){
 
 	int checker = 0;
 	cout <<"first checker"<<checker<<endl;
